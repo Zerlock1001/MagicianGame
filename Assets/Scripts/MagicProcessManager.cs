@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class MagicProcessManager : MonoBehaviour
 {
+    public static MagicProcessManager instance;
     public MagicProcess[] processesOrigin;
     MagicProcess currentProcess;
     MagicProcess[] processes;
@@ -9,6 +10,7 @@ public class MagicProcessManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        instance = this;
         DuplicateProcesses();
         currentProcessIndex = 0;
         currentProcess = processes[currentProcessIndex];
@@ -25,9 +27,20 @@ public class MagicProcessManager : MonoBehaviour
     {
         ProcessApply();
     }
+    public void NextStep(){
+        Debug.Log("NextStep: " + currentProcessIndex);
+        currentProcessIndex++;
+        if(currentProcessIndex >= processes.Length){
+            return;
+        }
+        currentProcess = processes[currentProcessIndex];
+    }
     void ProcessApply(){
         if(currentProcess.ConditionMet()){
             currentProcess.Apply();
+        }
+        else{
+            currentProcess.UnApply();
         }
     }
 }

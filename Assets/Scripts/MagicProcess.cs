@@ -25,6 +25,12 @@ public class MagicProcess : ScriptableObject
             effect.Apply();
         }
     }
+    public virtual void UnApply(){
+        foreach(var effect in effects){
+            effect.UnApply();
+        }
+    }
+    
     public enum MagicConditionExpression{
         And,
         Or,
