@@ -8,6 +8,9 @@ public class MagicProcess : ScriptableObject
     public MagicProcessCondition[] conditions;
     public MagicProcessEffect[] effects;
     public virtual bool ConditionMet(){
+        if(conditions.Length == 0){
+            return true;
+        }
         switch(expression){
             case MagicConditionExpression.And:
                 return conditions.All(condition => condition.ConditionMet());

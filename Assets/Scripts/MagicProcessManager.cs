@@ -4,7 +4,7 @@ public class MagicProcessManager : MonoBehaviour
 {
     public static MagicProcessManager instance;
     public MagicProcess[] processesOrigin;
-    MagicProcess currentProcess;
+    public MagicProcess currentProcess;
     MagicProcess[] processes;
     int currentProcessIndex = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

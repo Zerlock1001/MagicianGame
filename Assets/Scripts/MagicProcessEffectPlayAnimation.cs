@@ -13,7 +13,8 @@ public class MagicProcessEffectPlayAnimation : MagicProcessEffect
         if(gameObject == null || gameObject.GetComponent<Animator>() == null){
             return;
         }
-        if(gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName(animationName)){
+        if(!gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName(animationName)){
+            Debug.Log("PlayAnimation: " + animationName);
             Animator animator = gameObject.GetComponent<Animator>();
             animator.speed = speed;
             animator.Play(animationName);
