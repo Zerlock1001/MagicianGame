@@ -10,21 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c098beabe25b2e7459b34efd2f9a2884, type: 3}
-  m_Name: DialogueTest
+  m_Name: DialogueIntroduction
   m_EditorClassIdentifier: 
   name: The Teacher
   portrait: {fileID: -6294819348821226602, guid: 4249bf5943ea0b24eb86a569ab23fedf, type: 3}
-  content: Hello! This class we will introduce a red string magic.
-  choicesCount: 2
-  choices:
-  - Ok, let's start it!
-  - I want to learn how to do it...
+  content: Ok, first you can press space and drag the string.
+  choicesCount: 0
+  choices: []
   followingDialogues:
   - {fileID: 0}
-  - {fileID: 11400000, guid: 04679779e845842408c26dff4b9ef88b, type: 2}
   effects:
-  - effect:
-    - {fileID: 11400000, guid: 82cf9f1386c856442804f2316e7f2407, type: 2}
-  - effect:
-    - {fileID: 11400000, guid: 82cf9f1386c856442804f2316e7f2407, type: 2}
+  - effect: []
+  - effect: []
   - effect: []

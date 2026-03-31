@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afb5294c51ea1e4449811c3670a53e20, type: 3}
-  m_Name: Test
+  m_Script: {fileID: 11500000, guid: 85a0e4ce474c36b43b3883b3ba4563cd, type: 3}
+  m_Name: BlackOut
   m_EditorClassIdentifier: 
   expression: 0
-  conditions:
-  - {fileID: 11400000, guid: 0d19a61ccb01f20469057228a20ac46d, type: 2}
-  effects:
-  - {fileID: 11400000, guid: 4137124ada2a0d54dbbdf061958663c6, type: 2}
+  conditions: []
+  effects: []
+  blackScreenName: BlackScreen
+  fadeIn: 0
+  fadeTime: 2

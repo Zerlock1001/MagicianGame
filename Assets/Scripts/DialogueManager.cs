@@ -10,9 +10,9 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager Instance;
     public DialogueContent currentDialogueContent;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
-    {
+    void Awake(){
         Instance = this;
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,6 +26,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
     public void AwakeDialogue(DialogueContent dialogueContent){
+        gameObject.SetActive(true);
         currentDialogueContent = dialogueContent;
         nameTextObject.GetComponent<TMP_Text>().text = currentDialogueContent.name;
         portraitObject.GetComponent<Image>().sprite = currentDialogueContent.portrait;
@@ -49,7 +50,7 @@ public class DialogueManager : MonoBehaviour
         }
         if(choiceIndex<currentDialogueContent.followingDialogues.Length){
             if(currentDialogueContent.followingDialogues[choiceIndex] != null){
-             DialogueManager.Instance.AwakeDialogue(currentDialogueContent.followingDialogues[choiceIndex]);
+                DialogueManager.Instance.AwakeDialogue(currentDialogueContent.followingDialogues[choiceIndex]);
             }
             else{
                 EndDialogue();
@@ -64,7 +65,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         else{
-            EndDialogue();
+            //EndDialogue();
         }
     }
     public void EndDialogue(){
