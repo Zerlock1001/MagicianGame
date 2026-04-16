@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5dbc7d0f19d8924d99c57043327324c, type: 3}
-  m_Name: Level1-1Hand
+  m_Name: Level1-3Hand
   m_EditorClassIdentifier: 
-  animationName: Stage_1
+  animationName: Stage_4
   gameObjectName: VideoPlayer
-  speed: 1.5
+  speed: 1

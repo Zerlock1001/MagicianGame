@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5dbc7d0f19d8924d99c57043327324c, type: 3}
-  m_Name: Level1-1Hand
+  m_Script: {fileID: 11500000, guid: afb5294c51ea1e4449811c3670a53e20, type: 3}
+  m_Name: Level1-3
   m_EditorClassIdentifier: 
-  animationName: Stage_1
-  gameObjectName: VideoPlayer
-  speed: 1.5
+  expression: 0
+  conditions:
+  - {fileID: 11400000, guid: 9fa43c8fe8581934e8a2907119236540, type: 2}
+  effects:
+  - {fileID: 11400000, guid: 6f7d21a1596fb9d48ac110bc45bcbf62, type: 2}

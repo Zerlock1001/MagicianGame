@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5dbc7d0f19d8924d99c57043327324c, type: 3}
-  m_Name: Level1-1Hand
+  m_Script: {fileID: 11500000, guid: 0351dd5ecc101c542a6510710a8032bf, type: 3}
+  m_Name: Dialogue1-3Guide
   m_EditorClassIdentifier: 
-  animationName: Stage_1
-  gameObjectName: VideoPlayer
-  speed: 1.5
+  expression: 0
+  conditions: []
+  effects: []
+  dialogueContent: {fileID: 11400000, guid: 3504c4a2447fd69419fbd675f7f155f0, type: 2}
+  nextStepAfterApply: 1
