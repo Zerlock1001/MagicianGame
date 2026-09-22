@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c098beabe25b2e7459b34efd2f9a2884, type: 3}
+  m_Name: Dialogue1-3Guide
+  m_EditorClassIdentifier: 
+  name: The Teacher
+  portrait: {fileID: -6294819348821226602, guid: 4249bf5943ea0b24eb86a569ab23fedf, type: 3}
+  content: Press B
+  choicesCount: 0
+  choices: []
+  followingDialogues: []
+  effects:
+  - effect: []
+  - effect: []
+  - effect: []

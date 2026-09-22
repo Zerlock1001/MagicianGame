@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationName: Stage_1
   gameObjectName: VideoPlayer
+  speed: 1.5
