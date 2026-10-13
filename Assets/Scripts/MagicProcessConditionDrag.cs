@@ -3,6 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "MagicProcessConditionDrag", menuName = "MagicProcessCondition/Drag")]
 public class MagicProcessConditionDrag : MagicProcessCondition
 {
+    public bool mouseDownRequired = true;
     public bool fixedDirection = false;
     public Vector3 direction = Vector3.forward;
     Vector3 mousePosition;
@@ -11,7 +12,7 @@ public class MagicProcessConditionDrag : MagicProcessCondition
     public override bool ConditionMet(){
         MouseDown();
         MouseUp();
-        if(mouseDown){
+        if(mouseDown || !mouseDownRequired){
             Vector3 mouseDelta = GetMouseDelta();
             if(fixedDirection){
                 //Debug.Log(Vector3.Project(mouseDelta, direction).magnitude);

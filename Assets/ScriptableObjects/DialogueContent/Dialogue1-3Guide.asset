@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: The Teacher
   portrait: {fileID: -6294819348821226602, guid: 4249bf5943ea0b24eb86a569ab23fedf, type: 3}
-  content: Press B
+  content: Now press A to remove the bobbin.
   choicesCount: 0
   choices: []
   followingDialogues: []
