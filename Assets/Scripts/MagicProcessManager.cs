@@ -14,6 +14,7 @@ public class MagicProcessManager : MonoBehaviour
         DuplicateProcesses();
         currentProcessIndex = 0;
         currentProcess = processes[currentProcessIndex];
+        currentProcess.OnEnter();
     }
     void DuplicateProcesses(){
         processes = new MagicProcess[processesOrigin.Length];
@@ -34,6 +35,7 @@ public class MagicProcessManager : MonoBehaviour
             return;
         }
         currentProcess = processes[currentProcessIndex];
+        currentProcess.OnEnter();
     }
     void ProcessApply(){
         if(currentProcess.ConditionMet()){

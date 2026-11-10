@@ -23,14 +23,28 @@ public class MagicProcess : ScriptableObject
         }
         return false;
     }
+    public virtual void OnEnter(){
+        if(conditions == null){
+            return;
+        }
+        foreach(var condition in conditions){
+            if(condition != null){
+                condition.OnProcessEnter();
+            }
+        }
+    }
     public virtual void Apply(){
         foreach(var effect in effects){
-            effect.Apply();
+            if(effect != null){
+                effect.Apply();
+            }
         }
     }
     public virtual void UnApply(){
         foreach(var effect in effects){
-            effect.UnApply();
+            if(effect != null){
+                effect.UnApply();
+            }
         }
     }
     

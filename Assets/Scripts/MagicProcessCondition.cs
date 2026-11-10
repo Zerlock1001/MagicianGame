@@ -5,4 +5,7 @@ public class MagicProcessCondition : ScriptableObject
     public virtual bool ConditionMet(){
         return false;
     }
+
+    public virtual void OnProcessEnter(){
+    }
 }

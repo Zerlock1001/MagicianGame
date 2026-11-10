@@ -562,7 +562,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.98, y: 7.74}
+  m_Size: {x: 3.305, y: 3.21}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -1085,6 +1085,10 @@ PrefabInstance:
       propertyPath: currentDialogueContent
       value: 
       objectReference: {fileID: 11400000, guid: 921fb187d1c2e314e91b00b6fa5100b7, type: 2}
+    - target: {fileID: 6096314299892140425, guid: aeddfe164c14d51478ff29e538532bbf, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1252,7 +1256,7 @@ SpriteRenderer:
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6.25, y: 0.29}
+  m_Size: {x: 4.34, y: 1.94}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -1399,6 +1403,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0f86f69fe941fb34a88db0d5fc10c01d, type: 2}
   - {fileID: 11400000, guid: bac8280ff577a834696a70916fb9e007, type: 2}
   - {fileID: 11400000, guid: 32a6246785a69ec489e4b789f296b61d, type: 2}
+  - {fileID: 11400000, guid: 481cb3fc5204391408e2dc4799a13071, type: 2}
+  - {fileID: 11400000, guid: b3ddacf80a6cd3c41aedfa7fe27ff2df, type: 2}
   - {fileID: 11400000, guid: 55159f624b6f9d24aa705ebf81c913b9, type: 2}
   currentProcess: {fileID: 0}
 --- !u!1 &1898147931
@@ -1648,7 +1654,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.025, y: 3.655}
+  m_Size: {x: 3.555, y: 3.74}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
