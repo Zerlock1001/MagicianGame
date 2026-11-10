@@ -1256,7 +1256,7 @@ SpriteRenderer:
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.34, y: 1.94}
+  m_Size: {x: 1.32, y: 0.21}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -1405,6 +1405,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 32a6246785a69ec489e4b789f296b61d, type: 2}
   - {fileID: 11400000, guid: 481cb3fc5204391408e2dc4799a13071, type: 2}
   - {fileID: 11400000, guid: b3ddacf80a6cd3c41aedfa7fe27ff2df, type: 2}
+  - {fileID: 11400000, guid: d2e3f405162738495a6b7c8d9e0f1122, type: 2}
+  - {fileID: 11400000, guid: 4bec0f15333f2b34caf0b6c7e5b0d9d4, type: 2}
+  - {fileID: 11400000, guid: 55ee66ff7788990011aa22bb33cc44dd, type: 2}
+  - {fileID: 11400000, guid: f405162738495a6b7c8d9e0f11223344, type: 2}
+  - {fileID: 11400000, guid: 7788990011aa22bb33cc44dd55ee66ff, type: 2}
+  - {fileID: 11400000, guid: 162738495a6b7c8d9e0f112233445566, type: 2}
+  - {fileID: 11400000, guid: 990011aa22bb33cc44dd55ee66ff7788, type: 2}
+  - {fileID: 11400000, guid: 38495a6b7c8d9e0f1122334455667788, type: 2}
+  - {fileID: 11400000, guid: bb2233cc44dd55ee66ff7788990011aa, type: 2}
+  - {fileID: 11400000, guid: bac8280ff577a834696a70916fb9e007, type: 2}
   - {fileID: 11400000, guid: 55159f624b6f9d24aa705ebf81c913b9, type: 2}
   currentProcess: {fileID: 0}
 --- !u!1 &1898147931

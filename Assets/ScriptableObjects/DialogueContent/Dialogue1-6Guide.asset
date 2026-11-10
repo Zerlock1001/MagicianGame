@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: The Teacher
   portrait: {fileID: -6294819348821226602, guid: 4249bf5943ea0b24eb86a569ab23fedf, type: 3}
-  content: Great job! Then we pull the string to break it. Press A and D alternately
-    to pull it.
+  content: Great! Then we'll break the string. Now press A and D alternately to
+    pull the string.
   choicesCount: 0
   choices: []
   followingDialogues: []

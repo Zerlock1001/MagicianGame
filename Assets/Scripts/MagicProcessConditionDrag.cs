@@ -40,4 +40,11 @@ public class MagicProcessConditionDrag : MagicProcessCondition
             mouseDown = false;
         }
     }
+
+    public override void OnProcessEnter()
+    {
+        mouseDown = false;
+        mousePosition = Vector3.zero;
+        mousePositionLastFrame = Vector3.zero;
+    }
 }

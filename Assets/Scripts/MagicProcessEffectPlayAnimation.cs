@@ -36,11 +36,33 @@ public class MagicProcessEffectPlayAnimation : MagicProcessEffect
         yield return null;
         while(true){
             AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-            if(stateInfo.IsName(animationName) && stateInfo.normalizedTime >= 1f){
-                break;
+            // speed<=0：当前步骤暂停推进，即使到片尾也不进入下一步
+            if(stateInfo.IsName(animationName) && stateInfo.normalizedTime >= 1f && animator.speed > 0f){
+                if(IsBlockedByIncompleteDualHandRub()){
+                    animator.Play(animationName, 0, 0.99f);
+                    animator.speed = 0f;
+                }
+                else{
+                    break;
+                }
             }
             yield return null;
         }
         MagicProcessManager.instance.NextStep();
+    }
+
+    static bool IsBlockedByIncompleteDualHandRub(){
+        MagicProcess process = MagicProcessManager.instance != null
+            ? MagicProcessManager.instance.currentProcess
+            : null;
+        if(process == null || process.conditions == null){
+            return false;
+        }
+        foreach(var condition in process.conditions){
+            if(condition is MagicProcessConditionDualHandRub rub && !rub.IsComplete){
+                return true;
+            }
+        }
+        return false;
     }
 }
