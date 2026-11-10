@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: The Teacher
   portrait: {fileID: -6294819348821226602, guid: 4249bf5943ea0b24eb86a569ab23fedf, type: 3}
-  content: Hold Space + LMB, then drag right.
+  content: Hold Space and LMB, then drag right.
   choicesCount: 0
   choices: []
   followingDialogues: []
