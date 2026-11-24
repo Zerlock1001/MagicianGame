@@ -34,35 +34,25 @@ public class MagicProcessEffectPlayAnimation : MagicProcessEffect
 
     static IEnumerator WaitForAnimationComplete(Animator animator, string animationName){
         yield return null;
+        bool started = false;
         while(true){
+            if(animator == null || MagicProcessManager.instance == null){
+                yield break;
+            }
             AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-            // speed<=0：当前步骤暂停推进，即使到片尾也不进入下一步
-            if(stateInfo.IsName(animationName) && stateInfo.normalizedTime >= 1f && animator.speed > 0f){
-                if(IsBlockedByIncompleteDualHandRub()){
-                    animator.Play(animationName, 0, 0.99f);
-                    animator.speed = 0f;
+            if(stateInfo.IsName(animationName)){
+                // 播到最后一帧就进入下一步。不再因为 DualHandRub 未完成而把速度压成 0。
+                if(stateInfo.normalizedTime < 0.99f){
+                    started = true;
                 }
-                else{
+                else if(started){
                     break;
                 }
             }
             yield return null;
         }
-        MagicProcessManager.instance.NextStep();
-    }
-
-    static bool IsBlockedByIncompleteDualHandRub(){
-        MagicProcess process = MagicProcessManager.instance != null
-            ? MagicProcessManager.instance.currentProcess
-            : null;
-        if(process == null || process.conditions == null){
-            return false;
+        if(MagicProcessManager.instance != null){
+            MagicProcessManager.instance.NextStep();
         }
-        foreach(var condition in process.conditions){
-            if(condition is MagicProcessConditionDualHandRub rub && !rub.IsComplete){
-                return true;
-            }
-        }
-        return false;
     }
 }

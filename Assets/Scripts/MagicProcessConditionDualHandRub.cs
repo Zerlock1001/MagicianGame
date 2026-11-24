@@ -20,6 +20,7 @@ public class MagicProcessConditionDualHandRub : MagicProcessCondition
     int leftCount;
     int rightCount;
     bool wasLeftDown;
+    bool holdWasDown;
     float activeUntil = -1f;
     bool completed;
 
@@ -40,11 +41,16 @@ public class MagicProcessConditionDualHandRub : MagicProcessCondition
         }
         wasLeftDown = leftDown;
 
-        if (Input.GetMouseButton(holdMouseButton) && Input.GetMouseButtonDown(tapMouseButton))
+        // Windows 会把「按住右键再点左键」报成中键，只查右键+左键会一直加不上次数
+        bool holdNow = Input.GetMouseButton(holdMouseButton);
+        bool leftClick = Input.GetMouseButtonDown(tapMouseButton);
+        bool middleClick = Input.GetMouseButtonDown(2);
+        if ((leftClick && (holdNow || holdWasDown)) || middleClick)
         {
             rightCount++;
             activeUntil = Time.unscaledTime + pulseDuration;
         }
+        holdWasDown = holdNow;
 
         if (leftCount >= requiredLeftPresses && rightCount >= requiredRightPresses)
         {
@@ -60,6 +66,7 @@ public class MagicProcessConditionDualHandRub : MagicProcessCondition
         leftCount = 0;
         rightCount = 0;
         wasLeftDown = false;
+        holdWasDown = false;
         activeUntil = -1f;
         completed = false;
     }
